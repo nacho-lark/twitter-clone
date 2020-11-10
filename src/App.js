@@ -1,9 +1,10 @@
 import "./App.css";
+import SignIn from "./views/SignIn";
 
 function App() {
   return (
     <div className="App">
-      <h1>Twitter</h1>
+      <SignIn />
     </div>
   );
 }
