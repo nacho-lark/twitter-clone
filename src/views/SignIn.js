@@ -3,20 +3,40 @@
 import { jsx } from "@emotion/core";
 import React from "react";
 import Logo from "../building_blocks/Logo";
-import TextInput from "../building_blocks/TextInput";
+import FormInput from "../building_blocks/FormInput";
 import Button from "../building_blocks/Button";
+import Link from "../building_blocks/Link";
 
 const SignIn = () => {
   return (
-    <div css={{ backgroundColor: "#13202c", minHeight: "100vh" }}>
-      <main css={{ maxWidth: "600px", margin: "0 auto" }}>
+    <div
+      css={{
+        backgroundColor: "#13202c",
+        minHeight: "100vh",
+      }}
+    >
+      <main css={{ maxWidth: "600px", margin: "0 auto", paddingTop: "1rem" }}>
         <Logo />
-        <h1 css={{ color: "#fff", fontSize: "23px", textAlign: "center" }}>
+        <h1
+          css={{
+            color: "#fff",
+            fontSize: "2.3rem",
+            textAlign: "center",
+            margin: "1.8rem 0 2.4rem",
+          }}
+        >
           Iniciar sesión en Twitter
         </h1>
-        <TextInput placeholder="Name" />
-        <TextInput placeholder="Mail" />
-        <Button>Iniciar sesión</Button>
+        <form>
+          <FormInput label="Teléfono, correo o usuario" id="user" type="text" />
+          <FormInput label="Contraseña" id="pass" type="password" />
+          <Button>Iniciar sesión</Button>
+        </form>
+        <div css={{ textAlign: "center", marginTop: "3rem" }}>
+          <Link to="#">¿Olvidaste tu contraseña?</Link>
+          <span css={{ color: "#8599A6", margin: "0 .6rem" }}>·</span>
+          <Link to="#">Regístrate en Twitter</Link>
+        </div>
       </main>
     </div>
   );

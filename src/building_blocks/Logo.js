@@ -7,7 +7,7 @@ import LogoImg from "../images/twitter-logo.svg";
 const Logo = () => {
   return (
     <div css={{ textAlign: "center" }}>
-      <img src={LogoImg} css={{ width: "60px" }} alt="twitter logo" />
+      <img src={LogoImg} css={{ width: "6rem" }} alt="twitter logo" />
     </div>
   );
 };

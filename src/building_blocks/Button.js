@@ -1,26 +1,21 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from "@emotion/core";
+import styled from "@emotion/styled";
 import React from "react";
 
+// button non active: #23608e active: #1da1f2
+const StyledButton = styled.button`
+  background: #23608e;
+  color: #fff;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5rem;
+  padding: 1.6rem 0;
+  outline: none;
+`;
+
 const Button = ({ children }) => {
-  // button non active: #23608e active: #1da1f2
-  return (
-    <button
-      css={{
-        background: "#23608e ",
-        color: "#fff",
-        width: "100%",
-        fontSize: "1.5rem",
-        fontWeight: "700",
-        border: "none",
-        borderRadius: "50px",
-        padding: "1.5rem 0",
-      }}
-    >
-      {children}
-    </button>
-  );
+  return <StyledButton type="submit">{children}</StyledButton>;
 };
 
 export default Button;
