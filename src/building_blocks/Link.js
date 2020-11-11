@@ -1,17 +1,18 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from "@emotion/core";
+import styled from "@emotion/styled";
 import React from "react";
 
+const StyledLink = styled.a`
+  color: #0091e7;
+  font-size: 1.5rem;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const Link = ({ children, to }) => {
-  return (
-    <a
-      href={to}
-      css={{ color: "#0091e7", fontSize: "1.5rem", textDecoration: "none" }}
-    >
-      {children}
-    </a>
-  );
+  return <StyledLink href={to}>{children}</StyledLink>;
 };
 
 export default Link;
